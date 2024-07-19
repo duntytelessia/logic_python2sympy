@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "logic-python2sympy"
+version = "0.1.0"
+description = "convert a logical expression written in `Python` syntax, into a `Sympy` expression"
+authors = ["Telessia <dunty.telessia@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+astor = "^0.8.1"
+sympy = "^1.13.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
