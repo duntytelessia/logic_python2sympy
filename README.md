@@ -8,9 +8,11 @@ Thus, this module provides functions that can convert a logical expression writt
 
 ```python
 >>> import logic_python2sympy as p2s
->>> code = "not a and ((x > 0) or (y != 0))"
+>>> code = "((0 < x <= 10) or not y"
 >>> print(p2s.convert(code))
-And(Not(a), Or((x > 0), Neq(y, 0)))
+Or(And(0 < x, x <= 10), Not(y))
+>> print(p2s.get_expression(code))
+~y | ((0 < x) & (x <= 10))
 ```
 
 ### convert
@@ -21,4 +23,16 @@ convert(expr: str) -> str
 
 Transform a `Python` logical expression into `Sympy` syntax. \
 expr: valid logical expression, i.e. expr must be valid `Python` syntax, and must be a combintion of the following `ast` nodes: `BoolOp, BinOp, UnaryOp, Compare, Call, Constant, Name` \
-raises: `NotImplentedError`
+raises: `NotImplentedError`, when the expression contains operators that are not supported in `Sympy`
+
+### get_expression
+
+```python
+get_expression(expr: str) -> Any
+```
+
+Transform a `Python` logical expression into a `Sympy` expression.
+expr: valid logical expression, i.e. expr must be valid `Python` syntax,
+and must be a combintion of the following `ast` nodes:
+`BoolOp, BinOp, UnaryOp, Compare, Call, Constant, Name`
+raises: `NotImplentedError`, when the expression contains operators that are not supported in `Sympy`
