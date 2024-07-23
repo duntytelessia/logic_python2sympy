@@ -2,7 +2,7 @@ import ast
 import astor
 import sympy
 from typing import Any
-from transformer import Transformer
+from logic_python2sympy.transformer import Transformer
 
 
 def convert(expr: str) -> str:
@@ -31,8 +31,3 @@ def get_expression(expr: str) -> Any:
 
     new_expr = convert(expr)
     return sympy.sympify(new_expr)
-
-
-if __name__ == '__main__':
-    expr = '0 < x <= 10 and y != 0'
-    print(get_expression(expr))

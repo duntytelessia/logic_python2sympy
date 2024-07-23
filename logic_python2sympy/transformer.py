@@ -115,13 +115,3 @@ class Transformer(ast.NodeTransformer):
         else:
             # transform into a And call
             return ast.Call(ast.Name('And'), new_expressions, [])
-
-
-if __name__ == '__main__':
-
-    code = 'a == b != c <= d'
-    transformer = Transformer()
-    tree = ast.parse(code)
-    print(ast.dump(tree))
-    new_tree = transformer.visit(tree)
-    print(ast.dump(new_tree))
