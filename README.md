@@ -31,7 +31,7 @@ raises: `NotImplentedError`, when the expression contains operators that are not
 get_expression(expr: str) -> Any
 ```
 
-Transform a `Python` logical expression into a `Sympy` expression.
+Transform a `Python` logical expression into a `Sympy` expression. \
 expr: valid logical expression, i.e. expr must be valid `Python` syntax,
 and must be a combintion of the following `ast` nodes:
 `BoolOp, BinOp, UnaryOp, Compare, Call, Constant, Name`
