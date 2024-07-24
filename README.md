@@ -1,5 +1,11 @@
 # logic_python2sympy
 
+| | |
+| --- | --- |
+| PyPI: | <https://pypi.org/project/logic-python2sympy/> |
+| Source: | <https://github.com/duntytelessia/logic_python2sympy/> |
+| License: | MIT |
+
 `Sympy` has the advantage of using `Python` syntax in its own expressions, but with some exceptions :
 logical expressions in `Sympy` differ a bit from their `Python` counterparts (`a and b` is written `a & b` in `Sympy`).
 Thus, this module provides functions that can convert a logical expression written in `Python` syntax, into a `Sympy` expression.

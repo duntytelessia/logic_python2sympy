@@ -3,7 +3,10 @@ name = "logic-python2sympy"
 version = "0.1.0"
 description = "convert a logical expression written in `Python` syntax, into a `Sympy` expression"
 authors = ["Telessia <dunty.telessia@gmail.com>"]
+license = "MIT"
+repository = "https://github.com/duntytelessia/logic_python2sympy/"
 readme = "README.md"
+keywords = ["logical expression", "sympy"]
 
 [tool.poetry.dependencies]
 python = "^3.12"
