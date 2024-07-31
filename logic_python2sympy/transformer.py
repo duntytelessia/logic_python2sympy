@@ -98,7 +98,7 @@ class Transformer(ast.NodeTransformer):
                     new_expressions.append(expr)
 
                 case ast.GtE():
-                    expr = ast.Compare(expressions[i], [ast.Lt()], [expressions[i+1]])
+                    expr = ast.Compare(expressions[i], [ast.GtE()], [expressions[i+1]])
                     new_expressions.append(expr)
 
                 case _:
