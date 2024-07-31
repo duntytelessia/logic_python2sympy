@@ -1,3 +1,6 @@
+'''
+Methods that use the NodeTransformer to transform a Python expression into Sympy syntax
+'''
 import ast
 import astor
 import sympy
@@ -17,7 +20,7 @@ def convert(expr: str) -> str:
     tree = ast.parse(expr)
     transformer = Transformer()
     new_tree = transformer.visit(tree)
-    return astor.to_source(new_tree)
+    return astor.to_source(new_tree).strip()
 
 
 def get_expression(expr: str) -> Any:

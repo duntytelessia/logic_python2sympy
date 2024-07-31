@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "logic-python2sympy"
-version = "0.1.1"
+version = "0.1.2"
 description = "convert a logical expression written in `Python` syntax, into a `Sympy` expression"
 authors = ["Telessia <dunty.telessia@gmail.com>"]
 license = "MIT"
